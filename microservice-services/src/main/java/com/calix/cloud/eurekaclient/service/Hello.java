@@ -34,9 +34,9 @@ public class Hello {
         return this.discoveryClient.getInstances("hello-service");
     }
 
-    @RequestMapping(value = "/hello", method = RequestMethod.GET)
-    public String hello(@RequestParam(value = "name", defaultValue = "everyone") String name) {
-        logger.info("/hello, params:name" + name);
+    @RequestMapping(value = "/hello/{name}")
+    public String hello(@PathVariable("name") String name) {
+        logger.info("/hello, params:" + name);
         return "hello " + name;
     }
 }

@@ -24,4 +24,17 @@ public class EurekaClientBootStrap {
     public static void main(String[] args) {
         SpringApplication.run(EurekaClientBootStrap.class, args);
     }
+
+//    @RestController
+//    class ServiceInstanceRestController {
+//
+//        @Autowired
+//        private DiscoveryClient discoveryClient;
+//
+//        @RequestMapping("/{applicationName}")
+//        public List<ServiceInstance> serviceInstancesByApplicationName(
+//                @PathVariable String applicationName) {
+//            return this.discoveryClient.getInstances(applicationName);
+//        }
+//    }
 }
